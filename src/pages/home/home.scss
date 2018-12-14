@@ -7,6 +7,10 @@ page-home {
         background-color: #FFC000 !important;
 
     }
+    .header{
+        background-color: #FFC000 !important;
+
+    }
     .icon{
         color: white !important;
 
@@ -14,6 +18,10 @@ page-home {
     ion-header{
         height: 120px !important;
         background-color: #FFC000 !important;
+    }
+    .bck-color{
+        color: white !important;
+        background-color:white !important;
     }
     .icon-title{
         text-align: left !important;
@@ -78,5 +86,9 @@ page-home {
                 }
             
                
+              }
+              .footer {
+                  color: white !important;
+                background-color:white !important;
               }
 }
