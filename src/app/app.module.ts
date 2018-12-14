@@ -14,6 +14,14 @@ import { LoginPageModule } from '../pages/login/login.module';
 import { AnalyticsPageModule } from '../pages/analytics/analytics.module';
 import { VenuePageModule } from '../pages/venue/venue.module';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environment';
+
+import { ApiProvider } from '../providers/api/api';
+import { AuthProvider } from '../providers/auth/auth';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -27,7 +35,10 @@ import { VenuePageModule } from '../pages/venue/venue.module';
     LoginPageModule,
     VenuePageModule,
     AnalyticsPageModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.config),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,6 +51,8 @@ import { VenuePageModule } from '../pages/venue/venue.module';
   providers: [
     StatusBar,
     SplashScreen,
+    ApiProvider,
+    AuthProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
