@@ -5,14 +5,16 @@ import { MyApp } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
 
-import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPageModule } from '../pages/login/login.module';
+import { AnalyticsPageModule } from '../pages/analytics/analytics.module';
+import { VenuePageModule } from '../pages/venue/venue.module';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -25,7 +27,7 @@ import { AuthProvider } from '../providers/auth/auth';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
+    
     ContactPage,
     HomePage,
     TabsPage
@@ -33,6 +35,8 @@ import { AuthProvider } from '../providers/auth/auth';
   imports: [
     BrowserModule,
     LoginPageModule,
+    VenuePageModule,
+    AnalyticsPageModule,
     IonicModule.forRoot(MyApp),
     FormsModule,
     AngularFireAuthModule,
@@ -43,7 +47,7 @@ import { AuthProvider } from '../providers/auth/auth';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
+    
     ContactPage,
     HomePage,
     TabsPage
