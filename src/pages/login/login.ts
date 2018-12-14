@@ -39,7 +39,7 @@ export class LoginPage {
 
   // login and go to home page
   login() {
-    this.navCtrl.setRoot(TabsPage);
+    this.navCtrl.push(TabsPage);
   }
 
   forgotPass() {
