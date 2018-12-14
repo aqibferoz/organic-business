@@ -9,7 +9,6 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPageModule } from '../pages/login/login.module';
@@ -23,6 +22,9 @@ import { environment } from '../environment';
 
 import { ApiProvider } from '../providers/api/api';
 import { AuthProvider } from '../providers/auth/auth';
+
+import { Geolocation } from '@ionic-native/geolocation';
+import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,8 @@ import { AuthProvider } from '../providers/auth/auth';
     SplashScreen,
     ApiProvider,
     AuthProvider,
+    Geolocation,
+    AndroidPermissions,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
