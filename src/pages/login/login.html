@@ -1,0 +1,78 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+<!-- -->
+<ion-content padding class="animated fadeIn login auth-page">
+  <div class="login-content">
+
+    <!-- Logo -->
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <div class="logo"></div>
+      <h2 ion-text class="text-white" no-margin>
+        <strong>UNTAPPD</strong>
+      </h2>
+    </div>
+
+    <!-- Login form -->
+    <form [formGroup]="onLoginForm" class="list-form">
+      <ion-item>
+        <ion-label floating>
+          Email
+        </ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <p ion-text color="danger" class="text-1x has-error" *ngIf="onLoginForm.get('email').touched && onLoginForm.get('email').hasError('required')">This field is required</p>
+
+      <ion-item>
+        <ion-label floating>
+          Password
+        </ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <p ion-text color="danger" class="text-1x has-error" *ngIf="onLoginForm.get('password').touched && onLoginForm.get('password').hasError('required')">This field is required</p>
+    </form>
+
+    <div>
+      <br>
+      <button ion-button icon-start block color="dark" class="btn-login" tappable (click)="login()" [disabled]="!onLoginForm.valid">
+        <ion-icon name="log-in"></ion-icon>
+        Login
+      </button>
+
+      <p text-center ion-text color="light">Forgot Password?</p>
+      <p text-center ion-text color="light">Need help?</p>
+
+
+      <!-- <ion-grid class="btn-group">
+        <ion-row>
+          <button ion-button icon-only block class="btn-facebook col col-4">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </button>
+          <button ion-button icon-only block class="btn-twitter col col-4">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </button>
+          <button ion-button icon-only block class="btn-gplus col col-4">
+            <ion-icon name="logo-googleplus"></ion-icon>
+          </button>
+        </ion-row>
+      </ion-grid> -->
+
+    </div>
+
+
+    <!-- Other links -->
+    
+
+  </div>
+</ion-content>
