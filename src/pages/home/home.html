@@ -1,17 +1,32 @@
 <ion-header>
-  <ion-navbar>
-    <ion-grid>
-      <ion-row>
-        <ion-col col-4>
-    <ion-title>Beer on tap</ion-title>
-  </ion-col>
-  </ion-row>
-  </ion-grid>
-  </ion-navbar>
+    <ion-navbar class="no-border" color="primary">
+        
+        <ion-title>
+          <div ion-text class="icon-title text-white"></div>
+          Beer on tap
+        </ion-title>
+        <ion-buttons end>
+          <button ion-button tappable (click)="presentNotifications($event)">
+            <ion-icon name="menu"></ion-icon>
+          </button> 
+        </ion-buttons>
+        
+      </ion-navbar>
+      <ion-searchbar (ionInput)="getItems($event)">
+        </ion-searchbar>
 </ion-header>
 
 <ion-content padding>
-   
+    <ion-list *ngIf="data != null">
+        <ion-item default-item no-lines *ngFor="let item of data.items;let i = index" (click)="onEvent('onItemClick', item)">
+          <ion-avatar item-start>
+            <img [src]="item.avatar"/>
+          </ion-avatar>
+          <h2 item-title>{{item.title}}</h2>
+          <h3 item-subtitle text-wrap>{{item.subtitle}}</h3>
+          <!-- <button box-shadow text-capitalize button-follow ion-button item-end>{{item.button}}</button> -->
+        </ion-item>
+      </ion-list>
     
      
 </ion-content>

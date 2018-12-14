@@ -1,5 +1,82 @@
 page-home {
     ion-navbar{
-        height:70px !important;
+        height: 70px !important;
+        background-color: #FFC000 !important;
     }
+    .toolbar-background{
+        background-color: #FFC000 !important;
+
+    }
+    .icon{
+        color: white !important;
+
+    }
+    ion-header{
+        height: 120px !important;
+        background-color: #FFC000 !important;
+    }
+    .icon-title{
+        text-align: left !important;
+    }
+    ion-title{
+        text-align: left !important;
+    }
+    .toolbar-title{
+        color: white !important;
+
+    }
+    ion-searchbar{
+        background-color:white !important;
+         border-radius:5px !important; 
+            margin:0 auto !important;
+             max-width: 85% !important;
+            margin-left: 10px !important;
+            }
+
+
+
+            .toolbar-ios {
+                min-height: 64px;
+              }
+            
+              .bar-button-default-ios,
+              .toolbar-title-ios {
+                padding-top: 20px;
+              }
+            
+              .content-ios .scroll-content {
+                top: -64px !important;
+              }
+            
+              .active .back-button,
+              .active .toolbar-title {
+                color: theme-colors('textColors', 'accent') !important;
+                animation-name: color-change;
+                animation-duration: 400ms;
+              }
+            
+              .back-button,
+              .toolbar-title {
+                color: theme-colors('textColors', 'primary') !important;
+              }
+            
+              .scroll-content {
+                top: -56px;
+              }
+            
+              [background-size] {
+                height: 300px;
+                position: relative;
+            
+                &:before {
+                  content: "";
+                  position: absolute;
+                  height: 50%;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                }
+            
+               
+              }
 }
