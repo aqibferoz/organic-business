@@ -25,27 +25,27 @@
     </div>
 
     <!-- Login form -->
-    <form [formGroup]="onLoginForm" class="list-form">
+    <form class="list-form">
       <ion-item>
         <ion-label floating>
           Email
         </ion-label>
-        <ion-input type="email" formControlName="email"></ion-input>
+        <ion-input type="email" name="email" [(ngModel)]="email"></ion-input>
       </ion-item>
-      <p ion-text color="danger" class="text-1x has-error" *ngIf="onLoginForm.get('email').touched && onLoginForm.get('email').hasError('required')">This field is required</p>
+      <p ion-text color="danger" class="text-1x has-error" *ngIf="emailRequired">This field is required</p>
 
       <ion-item>
         <ion-label floating>
           Password
         </ion-label>
-        <ion-input type="password" formControlName="password"></ion-input>
+        <ion-input type="password" name="password" [(ngModel)]="password"></ion-input>
       </ion-item>
-      <p ion-text color="danger" class="text-1x has-error" *ngIf="onLoginForm.get('password').touched && onLoginForm.get('password').hasError('required')">This field is required</p>
+      <p ion-text color="danger" class="text-1x has-error" *ngIf="passwordRequired">This field is required</p>
     </form>
 
     <div>
       <br>
-      <button ion-button icon-start block color="dark" class="btn-login" tappable (click)="login()" [disabled]="!onLoginForm.valid">
+      <button ion-button icon-start block color="dark" class="btn-login" tappable (click)="login()">
         <ion-icon name="log-in"></ion-icon>
         Login
       </button>
