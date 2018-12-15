@@ -15,4 +15,24 @@ export class ApiProvider {
     console.log('Hello ApiProvider Provider');
   }
 
+  addItem(item){
+    return this.api.collection('items').add(item);
+  }
+
+  getItems(){
+    return this.api.collection('items').snapshotChanges();
+  }
+
+  getItem(id) {
+    return this.api.collection('items').doc(id).valueChanges();
+  }
+
+  updateItem(id, data) {
+    return this.api.collection('items').doc(id).update(data);
+  }
+
+  deleteItem(id) {
+    return this.api.collection('items').doc(id).delete();
+  }
+
 }
