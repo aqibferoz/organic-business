@@ -20,16 +20,12 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-
-      platform.ready().then(() => {
-
-        this.androidPermissions.requestPermissions([this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION]).then(
-          sucess => console.log('Permmision Given...'),
-          err => console.log('Permmision Rejected...')
-        );
-
-      });
-
+    
     });
+    this.androidPermissions.requestPermissions([this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION]).then(
+      sucess => console.log('Permmision Given...'),
+      err => console.log('Permmision Rejected...')
+    );
+
   }
 }

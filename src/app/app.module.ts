@@ -1,6 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler, IonicPageModule } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
@@ -8,12 +8,10 @@ import { HttpClientModule } from "@angular/common/http";
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { LoginPageModule } from '../pages/login/login.module';
-import { AnalyticsPageModule } from '../pages/analytics/analytics.module';
-import { VenuePageModule } from '../pages/venue/venue.module';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -36,10 +34,15 @@ import { ItemsPage } from '../pages/items/items';
 @NgModule({
   declarations: [
     MyApp,
-    
     ContactPage,
     HomePage,
     TabsPage,
+<<<<<<< HEAD
+    LoginPage
+  ],
+  imports: [
+    BrowserModule,
+=======
     LoginPage,
     VenuePage,
     AnalyticsPage,
@@ -53,6 +56,7 @@ import { ItemsPage } from '../pages/items/items';
     // AnalyticsPageModule,
     // AddItemsPageModule,
     // ItemsPageModule,
+>>>>>>> 944c0acac52004dd8de81af79b7f45f7e914ffbc
     IonicModule.forRoot(MyApp),
     FormsModule,
     AngularFireAuthModule,
@@ -63,16 +67,19 @@ import { ItemsPage } from '../pages/items/items';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    
     ContactPage,
     HomePage,
     TabsPage,
+<<<<<<< HEAD
+    LoginPage
+=======
     AddItemsPage,
     LoginPage,
     VenuePage,
     AnalyticsPage,
     ItemsPage,
     AddItemsPage
+>>>>>>> 944c0acac52004dd8de81af79b7f45f7e914ffbc
   ],
   providers: [
     StatusBar,

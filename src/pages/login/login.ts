@@ -13,8 +13,6 @@ export class LoginPage {
   
   email: string;
   password: string;
-  emailRequired = false;
-  passwordRequired = false;
 
   constructor(public navCtrl: NavController, private auth: AuthProvider, private geolocation: Geolocation) {
 
@@ -49,16 +47,6 @@ export class LoginPage {
 
   // login and go to home page
   login() {
-
-    if (this.email === null) {
-
-      this.emailRequired = true;
-
-    } if (this.password === null) {
-
-      this.passwordRequired = true;
-
-    }
 
     if (this.email != null && this.password != null) {
 
