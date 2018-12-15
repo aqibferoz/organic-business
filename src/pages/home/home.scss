@@ -1,10 +1,14 @@
 page-home {
     ion-navbar{
         height: 70px !important;
-        background-color: #FFC000 !important;
+        background-color: #89CA42 !important;
     }
     .toolbar-background{
-        background-color: #FFC000 !important;
+        background-color: #89CA42 !important;
+
+    }
+    .header{
+        background-color: #89CA42 !important;
 
     }
     .icon{
@@ -13,15 +17,24 @@ page-home {
     }
     ion-header{
         height: 120px !important;
-        background-color: #FFC000 !important;
+        background-color: #89CA42 !important;
+    }
+    .bck-color{
+        color: white !important;
+        background-color:white !important;
+    }
+    .menu-btn{
+        border-radius: 10px !important;
     }
     .icon-title{
+        
         text-align: left !important;
     }
     ion-title{
         text-align: left !important;
     }
     .toolbar-title{
+        font-size: x-large !important;
         color: white !important;
 
     }
@@ -32,7 +45,9 @@ page-home {
              max-width: 85% !important;
             margin-left: 10px !important;
             }
-
+            .list{
+                margin-top: 65px !important;
+            }
 
 
             .toolbar-ios {
@@ -78,5 +93,9 @@ page-home {
                 }
             
                
+              }
+              .footer {
+                  color: white !important;
+                background-color:white !important;
               }
 }
