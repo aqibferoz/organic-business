@@ -19,23 +19,24 @@
     <ion-col col-12>
         <button ion-button (click) = "choosePicture()">Upload Image</button>
 
-        <ion-label><strong>PRICE</strong></ion-label>
-        <ion-input type="number" placeholder="0.00" [(ngModel)]="itemsData.title" style="width: 320px;
-     padding: 2px;
-     border: 1px solid gray;
-     margin: 0;
-     border-radius: 5px;
-     color: gray">
-       </ion-input>
+        <ion-item>
+            <ion-label floating>
+              Title
+            </ion-label>
+            <ion-input type="email" name="email" [(ngModel)]="itemsData.title"></ion-input>
+          </ion-item>
 
-       <ion-label><strong>VOUCHER CODE</strong></ion-label>
-        <ion-input type="text" placeholder="Enter the voucher code" [(ngModel)]="itemsData.description" style="width: 320px;
-     padding: 2px;
-     border: 1px solid gray;
-     margin: 0;
-     border-radius: 5px;
-     color: gray">
-       </ion-input>
+          <ion-item>
+              <ion-label floating>
+                Description
+              </ion-label>
+              <ion-input type="email" name="email" [(ngModel)]="itemsData.description"></ion-input>
+            </ion-item>
+            <br>
+            <button ion-button icon-start block color="dark" class="btn-login" tappable (click)="login()">
+                <ion-icon name="analytics"></ion-icon>
+                Post item
+              </button>
     </ion-col>
   </ion-row>
 </ion-grid>
