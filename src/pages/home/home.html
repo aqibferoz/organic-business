@@ -14,11 +14,12 @@
       </ion-navbar>
       <ion-searchbar (ionInput)="getItems($event)">
         </ion-searchbar>
+        
 </ion-header>
 
 <ion-content >
     <ion-list *ngIf="data != null">
-        <ion-item default-item no-lines *ngFor="let item of data.items;let i = index" >
+        <ion-item default-item no-lines *ngFor="let item of data.items;let i = index" (click)="itemsPage()">
           <ion-avatar item-start (click)="itemsPage()">
             <img [src]="item.avatar"/>
           </ion-avatar>

@@ -1,5 +1,7 @@
 page-add-items {
-    
+    .toolbar-title-md{
+        color: white !important;
+    }
     .toolbar-background-md {
         border-color: #b2b2b2;
         background-color: #89CA42 !important;
@@ -9,4 +11,14 @@ page-add-items {
     .header{
         background-color: #89CA42 !important;
     }
+    .back-button.show-back-button{
+        background-color: #89CA42 !important;
+        color: white !important;
+
+    }
+    .button-md{
+        background-color: #89CA42 !important;
+
+    }
+
 }
