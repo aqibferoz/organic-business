@@ -14,6 +14,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'items.html',
 })
 export class ItemsPage {
+
+tapNo: string;
+
   data = {
     "items": 
     {
@@ -30,5 +33,7 @@ export class ItemsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemsPage');
   }
-
+  updateItem(){
+    
+  }
 }

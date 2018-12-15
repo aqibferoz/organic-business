@@ -13,16 +13,75 @@
 </ion-header>
 
 
-<ion-content padding>
-    <ion-list style="padding-top:40px !important;">
-        <ion-item default-item no-lines (click)="itemsPage()">
-          <ion-avatar item-start (click)="itemsPage()">
+<ion-content>
+    <ion-list style="padding-top:60px !important;">
+        <ion-item default-item no-lines>
+          <ion-avatar item-start>
             <img [src]="data.items.avatar"/>
           </ion-avatar>
           <h2 item-title>{{data.items.title}}</h2>
           <h3 item-subtitle text-wrap>{{data.items.subtitle}}</h3>
          
-          <button box-shadow text-capitalize button-follow ion-button item-end>{{data.items.button}}</button>
+          <button box-shadow text-capitalize button-follow ion-button item-end class="info-circle"><ion-icon class="icon-blue" name="information-circle"></ion-icon></button>
         </ion-item>
       </ion-list>
+
+      <ion-list>
+          <ion-item default-item no-lines>
+            
+            <h3 item-title><b>CONTAINERS</b></h3>
+           
+            <button text-capitalize button-follow ion-button item-end class="add"><ion-icon name="add"></ion-icon><b>ADD</b></button>
+          </ion-item>
+        </ion-list>
+
+        <ion-list class="list-deatils">
+          
+        
+            <ion-item default-item no-lines>
+              
+              <h3 item-title><b>ITEM DETAILS</b></h3>
+             
+            </ion-item>
+            
+            <ion-label style="padding-left: 15px !important;">
+                Tap Number
+              </ion-label>
+              <ion-input type="text" [(ngModel)]="tapNo"></ion-input>
+              
+            
+         
+          </ion-list>
+          <hr>
+          
+          <ion-list>
+              <ion-item default-item no-lines>
+                  <h3 item-title>Title</h3>
+                  <h2 item-title>Vengeful Spirit IPA</h2>
+                 
+                </ion-item>
+          </ion-list>
+          <hr>
+          <ion-list>
+              <ion-item default-item no-lines>
+                  <h3 item-title>Title</h3>
+                  <h2 item-title>Vengeful Spirit IPA</h2>
+                 
+                </ion-item>
+          </ion-list>
+          <hr>
+          <ion-list>
+              <ion-item default-item no-lines>
+                  <h3 item-title>Title</h3>
+                  <h2 item-title>Vengeful Spirit IPA</h2>
+                 
+                </ion-item>
+          </ion-list>
+  
 </ion-content>
+<ion-footer no-shadow class="bck-color" >
+    <!-- <ion-toolbar position="bottom" class="bck-color"> -->
+      
+      <button ion-button full class="menu-btn" (click)= "updateItem()">Update Item</button>
+    <!-- </ion-toolbar> -->
+  </ion-footer>
