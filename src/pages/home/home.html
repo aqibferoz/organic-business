@@ -16,14 +16,15 @@
         </ion-searchbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content >
     <ion-list *ngIf="data != null">
-        <ion-item default-item no-lines *ngFor="let item of data.items;let i = index" (click)="onEvent('onItemClick', item)">
-          <ion-avatar item-start>
+        <ion-item default-item no-lines *ngFor="let item of data.items;let i = index" >
+          <ion-avatar item-start (click)="itemsPage()">
             <img [src]="item.avatar"/>
           </ion-avatar>
           <h2 item-title>{{item.title}}</h2>
           <h3 item-subtitle text-wrap>{{item.subtitle}}</h3>
+         
           <!-- <button box-shadow text-capitalize button-follow ion-button item-end>{{item.button}}</button> -->
         </ion-item>
       </ion-list>
@@ -33,6 +34,6 @@
 <ion-footer no-shadow class="bck-color" >
 	<!-- <ion-toolbar position="bottom" class="bck-color"> -->
     
-		<button ion-button full ><ion-icon name="add"> </ion-icon>Add New Item</button>
+		<button ion-button full class="menu-btn"><ion-icon name="add"> </ion-icon>Add New Item</button>
 	<!-- </ion-toolbar> -->
 </ion-footer>

@@ -25,6 +25,7 @@ import { AuthProvider } from '../providers/auth/auth';
 
 import { Geolocation } from '@ionic-native/geolocation';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
+import { ItemsPageModule } from '../pages/items/items.module';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
     LoginPageModule,
     VenuePageModule,
     AnalyticsPageModule,
+    ItemsPageModule,
     IonicModule.forRoot(MyApp),
     FormsModule,
     AngularFireAuthModule,
