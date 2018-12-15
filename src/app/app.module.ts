@@ -23,10 +23,7 @@ import { AuthProvider } from '../providers/auth/auth';
 
 import { Geolocation } from '@ionic-native/geolocation';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
-import { ItemsPageModule } from '../pages/items/items.module';
-import { AddItemsPageModule } from '../pages/add-items/add-items.module';
 import { AddItemsPage } from '../pages/add-items/add-items';
-import { LoginPage } from '../pages/login/login';
 import { VenuePage } from '../pages/venue/venue';
 import { AnalyticsPage } from '../pages/analytics/analytics';
 import { ItemsPage } from '../pages/items/items';
@@ -37,12 +34,6 @@ import { ItemsPage } from '../pages/items/items';
     ContactPage,
     HomePage,
     TabsPage,
-<<<<<<< HEAD
-    LoginPage
-  ],
-  imports: [
-    BrowserModule,
-=======
     LoginPage,
     VenuePage,
     AnalyticsPage,
@@ -56,7 +47,6 @@ import { ItemsPage } from '../pages/items/items';
     // AnalyticsPageModule,
     // AddItemsPageModule,
     // ItemsPageModule,
->>>>>>> 944c0acac52004dd8de81af79b7f45f7e914ffbc
     IonicModule.forRoot(MyApp),
     FormsModule,
     AngularFireAuthModule,
@@ -70,16 +60,12 @@ import { ItemsPage } from '../pages/items/items';
     ContactPage,
     HomePage,
     TabsPage,
-<<<<<<< HEAD
-    LoginPage
-=======
     AddItemsPage,
     LoginPage,
     VenuePage,
     AnalyticsPage,
     ItemsPage,
     AddItemsPage
->>>>>>> 944c0acac52004dd8de81af79b7f45f7e914ffbc
   ],
   providers: [
     StatusBar,
