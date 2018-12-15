@@ -6,7 +6,7 @@
           Beer on tap
         </ion-title>
         <ion-buttons end>
-          <button ion-button tappable (click)="presentNotifications($event)">
+          <button ion-button tappable (click)="menuButton()">
             <ion-icon name="menu"></ion-icon>
           </button> 
         </ion-buttons>
@@ -34,6 +34,6 @@
 <ion-footer no-shadow class="bck-color" >
 	<!-- <ion-toolbar position="bottom" class="bck-color"> -->
     
-		<button ion-button full class="menu-btn"><ion-icon name="add"> </ion-icon>Add New Item</button>
+		<button ion-button full class="menu-btn" (click)="addItems()"><ion-icon name="add"> </ion-icon>Add New Item</button>
 	<!-- </ion-toolbar> -->
 </ion-footer>
