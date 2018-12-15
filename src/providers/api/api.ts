@@ -12,7 +12,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 export class ApiProvider {
 
   constructor(public http: HttpClient, private api: AngularFirestore) {
-    console.log('Hello ApiProvider Provider');
+    
   }
 
   addItem(item){

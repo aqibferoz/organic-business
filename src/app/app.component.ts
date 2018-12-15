@@ -22,7 +22,7 @@ export class MyApp {
       splashScreen.hide();
     
     });
-    this.androidPermissions.requestPermissions([this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION]).then(
+    this.androidPermissions.requestPermissions([this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION, this.androidPermissions.PERMISSION.CAMERA, this.androidPermissions.PERMISSION.READ_EXTERNAL_STORAGE]).then(
       sucess => console.log('Permmision Given...'),
       err => console.log('Permmision Rejected...')
     );
