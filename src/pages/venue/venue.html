@@ -14,5 +14,15 @@
 
 
 <ion-content padding>
-
+    <ion-list style="padding-top:40px !important;">
+        <ion-item default-item no-lines>
+          <ion-avatar item-start>
+            <img [src]="data.items.avatar"/>
+          </ion-avatar>
+          <h2 item-title>{{data.items.title}}</h2>
+          <h3 item-subtitle text-wrap>{{data.items.subtitle}}</h3>
+         
+        </ion-item>
+        
+      </ion-list>
 </ion-content>

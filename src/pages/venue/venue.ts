@@ -14,7 +14,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'venue.html',
 })
 export class VenuePage {
-
+  data = {
+    "items": 
+    {
+      "id": 1,
+      "avatar": "assets/images/avatar/16.jpg",
+      "title": "Vengeful Spirit IPA",
+      "subtitle": "Stone Brewing",
+      "button": "Categories"
+    },
+  };
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
