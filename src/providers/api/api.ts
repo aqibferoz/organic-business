@@ -19,8 +19,8 @@ export class ApiProvider {
     return this.api.collection('items').add(item);
   }
 
-  getItems(){
-    return this.api.collection('items').snapshotChanges();
+  getItems(uid){
+    return this.api.collection('items', resp => resp.where('uid', '==', uid)).snapshotChanges();
   }
 
   getItem(id) {

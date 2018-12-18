@@ -6,6 +6,7 @@ import { finalize, map } from 'rxjs/operators';
 import { ApiProvider } from '../../providers/api/api';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { HelperProvider } from '../../providers/helper/helper';
+import { AuthProvider } from '../../providers/auth/auth';
 
 @IonicPage()
 @Component({
@@ -16,7 +17,8 @@ export class AddItemsPage {
   
   itemsData={
     title:'',
-    description:''
+    description:'',
+    price: null
   }
 
   ref : AngularFireStorageReference;
@@ -29,7 +31,7 @@ export class AddItemsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private afStorage: AngularFireStorage, private api: ApiProvider, private camera: Camera,
-    private helper: HelperProvider) {
+    private helper: HelperProvider, private auth: AuthProvider) {
   }
 
   ionViewDidLoad() {
@@ -71,6 +73,25 @@ export class AddItemsPage {
       console.log(err);
     });
 
+  }
+
+  addItem() {
+    let item = {
+      title: this.itemsData.title,
+      description: this.itemsData.description,
+      image: this.imageUrl,
+      price: this.itemsData.price,
+      uid: this.auth.getToken()
+    }
+
+    if (item) {
+      this.api.addItem(item).then(
+        () => {
+          this.navCtrl.pop();
+        }
+      )  
+    }
+    
   }
 
   choosePicture() {

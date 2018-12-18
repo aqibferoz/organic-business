@@ -1,5 +1,9 @@
 page-home {
 
+    ion-item{
+        border-bottom: 1px solid gray;
+    }
+
     .searchbar-md {
         background: inherit;
         padding: 0px;
@@ -31,7 +35,7 @@ page-home {
     }
     
     .menu-btn{
-        border-radius: 10px !important;
+        background-color: #89CA42;
     }
     .icon-title{
         

@@ -21,13 +21,20 @@
           </ion-item>
 
           <ion-item>
-              <ion-label floating>
-                Description
-              </ion-label>
-              <ion-input type="email" name="email" [(ngModel)]="itemsData.description"></ion-input>
-            </ion-item>
+            <ion-label floating>
+              Description
+            </ion-label>
+            <ion-input type="email" name="email" [(ngModel)]="itemsData.description"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label floating>
+              Price
+            </ion-label>
+            <ion-input type="number" name="price" [(ngModel)]="itemsData.price"></ion-input>
+          </ion-item>
             <br>
-            <button ion-button icon-start block color="dark" class="btn-login" tappable (click)="login()">
+            <button ion-button icon-start block color="dark" class="btn-login" tappable (click)="addItem()">
                 <ion-icon name="analytics"></ion-icon>
                 Post item
               </button>
