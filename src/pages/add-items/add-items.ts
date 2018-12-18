@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the AddItemsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AngularFireStorage, AngularFireStorageReference, AngularFireUploadTask } from 'angularfire2/storage';
+import { Observable } from 'rxjs';
+import { finalize, map } from 'rxjs/operators';
+import { ApiProvider } from '../../providers/api/api';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { HelperProvider } from '../../providers/helper/helper';
 
 @IonicPage()
 @Component({
@@ -15,15 +14,75 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AddItemsPage {
   
-itemsData={
-  title:'',
-  description:''
-}
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  itemsData={
+    title:'',
+    description:''
+  }
+
+  ref : AngularFireStorageReference;
+  task: AngularFireUploadTask;
+  imageUrl: string;
+  createdCode = null;
+  sourcex: any;
+  base64Image: string;
+  uploadImageId: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private afStorage: AngularFireStorage, private api: ApiProvider, private camera: Camera,
+    private helper: HelperProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AddItemsPage');
+    
   }
 
+  uploadPhoto() {
+    
+    const id = Math.random().toString(36).substring(2);
+    this.ref = this.afStorage.ref(id);
+    let task = this.ref.putString(this.base64Image, 'data_url');
+    task.snapshotChanges()
+    .pipe(finalize(() => {
+      this.ref.getDownloadURL().subscribe(url => {
+        this.imageUrl = url;
+      });
+    })).subscribe();
+
+  }
+
+  takePhoto(source){
+   
+    if (source === 'camera') {
+      this.sourcex = this.camera.PictureSourceType.CAMERA;
+    } else if (source === 'library') {
+      this.sourcex = this.camera.PictureSourceType.PHOTOLIBRARY;
+    }
+    const options: CameraOptions = {
+      sourceType: this.sourcex,
+      quality: 30,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
+    }
+    this.camera.getPicture(options).then((imageData) => {
+      this.base64Image = 'data:image/jpeg;base64,' + imageData;
+      this.uploadPhoto();
+    }, (err) => {
+      console.log(err);
+    });
+
+  }
+
+  choosePicture() {
+    let myfunc = () => {
+      this.takePhoto('library');
+    };
+    let myfunc1 = () => {
+      this.takePhoto('camera');
+    };
+    this.helper.presentActionSheet('Choose an option.', 'Gallery', 'Camera', myfunc, myfunc1);
+  }
+
+
+  
 }

@@ -5,7 +5,7 @@ export const environment = {
         authDomain: "organicbusiness-1544704981294.firebaseapp.com",
         databaseURL: "https://organicbusiness-1544704981294.firebaseio.com",
         projectId: "organicbusiness-1544704981294",
-        storageBucket: "",
+        storageBucket: "organicbusiness-1544704981294.appspot.com",
         messagingSenderId: "1068289785128"
     }
 };
