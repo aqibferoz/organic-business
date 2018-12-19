@@ -1,4 +1,14 @@
 page-analytics {
+    .toolbar-ios ion-title{
+        background-color: #89CA42 !important;
+
+    }
+    .toolbar-title-ios{
+        color: white !important;
+    }
+    .item-ios.item-block .item-inner{
+        border-bottom: none !important;
+    }
     .toolbar-background-md{
         background-color: #89CA42 !important;
     }
@@ -8,7 +18,9 @@ page-analytics {
         margin: 1em 2em;
      }
   
-  
+     .toolbar-title-md{
+         color: white !important;
+     }
      canvas  {
         height: 250px;
      }

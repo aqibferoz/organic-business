@@ -40,11 +40,30 @@ page-menus {
         -webkit-box-shadow: none !important;
         color: #5DBCD2 !important;
     }
+    
+    
     ion-icon {
         display: inline-block;
         font-size: 1.8em;
         margin-right: 13px;
         margin-left: 5px;
         color: white;
+    }
+
+
+    .segment-ios .segment-button.segment-activated {
+        color: #fff  !important;
+        background-color: #89CA42 !important ;
+        opacity: 1;
+        -webkit-transition: 100ms all linear;
+        transition: 100ms all linear;
+    }
+    .segment-ios .segment-button{
+        border-color: #89CA42 !important;
+        color: white !important;
+    }
+    .button-ios{
+        background-color: #89CA42 !important;
+        border-radius: 10px !important;
     }
 }

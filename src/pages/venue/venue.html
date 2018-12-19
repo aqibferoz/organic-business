@@ -13,8 +13,8 @@
 </ion-header>
 
 
-<ion-content padding>
-    <ion-list class="list" style="padding-top:40px !important;">
+<ion-content padding style="margin-top:40px !important;">
+    <ion-list>
         <ion-item default-item no-lines>
           <ion-avatar item-start>
             <img [src]="data.items.avatar"/>
@@ -40,13 +40,15 @@
         </ion-item>
       
         <ion-row>
-          <ion-col>
+          <ion-col col-6 text-center>
             <button ion-button icon-start clear small>
-              <ion-icon name="comments"></ion-icon>
+                <ion-icon name="ios-text"></ion-icon>
+
               <div>Comments</div>
             </button>
           </ion-col>
-          <ion-col>
+          <hr id="hrc">
+          <ion-col col-6 text-center>
             <button ion-button icon-start clear small>
               <ion-icon name="text"></ion-icon>
               <div>Toast</div>
@@ -86,7 +88,7 @@
         
       <!-- </ion-list> -->
 
-      <ion-list class="list">
+      <ion-list>
           <ion-item default-item no-lines>
             <ion-avatar item-start>
               <img [src]="data.items.avatar"/>
@@ -112,13 +114,14 @@
           </ion-item>
         
           <ion-row>
-            <ion-col>
+            <ion-col col-6 text-center>
               <button ion-button icon-start clear small>
-                <ion-icon name="comments"></ion-icon>
+                <ion-icon name="ios-text"></ion-icon>
                 <div>Comments</div>
               </button>
             </ion-col>
-            <ion-col>
+            <hr id="hrc">
+            <ion-col col-6 text-center>
               <button ion-button icon-start clear small>
                 <ion-icon name="text"></ion-icon>
                 <div>Toast</div>
@@ -128,4 +131,6 @@
           </ion-row>
         
         </ion-card>
+        <br>
+        <br>
 </ion-content>

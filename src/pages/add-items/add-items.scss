@@ -1,4 +1,8 @@
 page-add-items {
+    .toolbar-ios ion-title{
+        background-color: #89CA42 !important;
+
+    }
     .toolbar-title-md{
         color: white !important;
     }
@@ -19,6 +23,13 @@ page-add-items {
     .button-md{
         background-color: #89CA42 !important;
 
+    }
+    .button-ios{
+        background-color: #89CA42 !important;
+
+    }
+    .toolbar-title-ios{
+        color: white !important;
     }
 
 }

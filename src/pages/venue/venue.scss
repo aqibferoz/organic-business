@@ -1,4 +1,5 @@
 page-venue {
+
     
     .toolbar-background-md {
         border-color: #b2b2b2;
@@ -104,10 +105,10 @@ page-venue {
 
 
     }
-    .card{
-        width: 342px;
-    margin-left: -0.7rem;
-    }
+    // .card{
+    //     width: 355px;
+    // margin-left: -0.7rem;
+    // }
     .button-clear-md{
         color: black !important;
     }
@@ -129,4 +130,25 @@ page-venue {
     [padding] h1:first-child, [padding] h2:first-child, [padding] h3:first-child, [padding] h4:first-child, [padding] h5:first-child, [padding] h6:first-child{
         margin-top: 0rem !important;
     }
+    #hrc{
+        height:         50px !important;
+        width:          1px !important; 
+        margin-left: -0.1rem;
+ 
+     }
+    
+     .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+        margin-top: 20px;
+    }
+    .list-ios {
+         margin: 0px !important;
+    }
+
+    .toolbar-ios ion-title {
+        background-color: #89CA42 !important;
+    }
+    .toolbar-title-ios{
+        color: white !important;
+    }
+    
 }
