@@ -6,6 +6,7 @@ import { ApiProvider } from '../../providers/api/api';
 import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 import { map } from 'rxjs/operators';
 import { AuthProvider } from '../../providers/auth/auth';
+import { MenusPage } from '../menus/menus';
 
 @Component({
   selector: 'page-home',
@@ -39,5 +40,8 @@ export class HomePage {
 
     addItems(){
         this.navCtrl.push(AddItemsPage)
+    }
+    menuButton(){
+        this.navCtrl.push(MenusPage)
     }
 }

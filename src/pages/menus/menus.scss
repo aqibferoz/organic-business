@@ -1,0 +1,50 @@
+page-menus {
+    .toolbar-title-md{
+        color: white !important;
+    }
+    ion-navbar{
+        height: 70px !important;
+        background-color: #89CA42 !important;
+    }
+    .toolbar-background{
+        background-color: #89CA42 !important;
+
+    }
+    .header{
+        background-color: #89CA42 !important;
+
+    }
+    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated{
+        border-color: white !important;
+    }
+    .segment-md .segment-button{
+        color: white !important;
+        background-color: transparent !important;
+        font-size: 1.5rem !important;
+    }
+    .item-md{
+        padding-left : 0px !important;
+    }
+    
+    .item-md .item-button{
+        font-size: 1.5rem !important;
+    }
+     .button-md {
+        background-color: #89CA42 !important;
+        -webkit-box-shadow: none !important;
+        color: white !important;
+        border-radius: 10px !important;
+    }
+    .change-btn{
+        background-color: white !important;
+        -webkit-box-shadow: none !important;
+        color: #5DBCD2 !important;
+    }
+    ion-icon {
+        display: inline-block;
+        font-size: 1.8em;
+        margin-right: 13px;
+        margin-left: 5px;
+        color: white;
+    }
+}

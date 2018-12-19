@@ -1,18 +1,92 @@
-<!--
-  Generated template for the AnalyticsPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>analytics</ion-title>
+    <ion-title>Analytics</ion-title>
   </ion-navbar>
+  <!-- <ion-list style="background-color: rgb(128, 128, 128) !important;"> -->
+      <ion-item>
+        
+        <h2 item-title>Last 30 days</h2>
+        <button item-end class="btn">CHANGE</button>
 
+      </ion-item>
+    <!-- </ion-list> -->
 </ion-header>
 
 
 <ion-content padding>
 
+    
+    
+    <ion-grid>
+       
+        <ion-row>
+           
+              <ion-col ion-col text-center no-padding col-12 >
+                  <div>
+        <canvas #lineChart></canvas>
+        </div>
+        </ion-col>
+        </ion-row>
+        </ion-grid>
+
+        <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item text-center>
+              <h1>65</h1>
+              <h3>CHECKS-INS</h3>
+            </ion-item>
+          </ion-col>
+          <hr id="hrv">
+          <ion-col>
+              <ion-item text-center>
+                <h1>55</h1>
+                <h3>UNIQUE USERS</h3>
+              </ion-item>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+      <hr style="width: 100% !important; height: 3px !important;" >
+
+      <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item text-center>
+                <h1 id="h1-color"><strong>1</strong></h1>
+                <h2 id="h1-color"><strong>TOTAL SUBSCRIBERS</strong></h2>
+              </ion-item>
+            </ion-col>
+            </ion-row>
+            </ion-grid>
+
+            <ion-grid>
+                <ion-row>
+                  <ion-col col-4 text-center>
+                    <ion-item text-center>
+                      <h1>65</h1>
+                      <h5 style="font-size:1.1rem !important;">ALL ALERTS</h5>
+                    </ion-item>
+                  </ion-col>
+                  <hr id="hrc">
+                  <!-- <hr> -->
+                  <ion-col col-4 text-center>
+                      <ion-item text-center>
+                        <h1>55</h1>
+                        <h5 style="font-size:1.1rem !important;">BEER ONLY</h5>
+                      </ion-item>
+                    
+                    </ion-col>
+                    <hr id="hrc">
+                    <!-- <hr> -->
+                    <ion-col col-4 text-center>
+                        <ion-item text-center>
+                          <h1>55</h1>
+                          <h5 style="font-size:1.1rem !important;">EVENTS ONLY</h5>
+                        </ion-item>
+                      </ion-col>
+                </ion-row>
+              </ion-grid>
+     
 </ion-content>

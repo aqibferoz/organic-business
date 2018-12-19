@@ -1,0 +1,50 @@
+
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <ion-row>
+      <ion-icon name="settings" (click) = "goBack()"></ion-icon>
+    <ion-title>Menus</ion-title> 
+  </ion-row> 
+  </ion-navbar>
+  <ion-segment [(ngModel)]="requests">
+
+      <ion-segment-button value="published">
+        Published
+      </ion-segment-button>
+
+      <ion-segment-button value="unpublished">
+        Unpublished
+      </ion-segment-button>
+
+    </ion-segment>
+</ion-header>
+
+
+<ion-content padding>
+    <div [ngSwitch]="requests">
+        <ion-list *ngSwitchCase="'published'" no-lines>
+            <ion-item default-item no-lines>
+               
+                <h2 item-title><b>Current Location</b></h2>
+                <h3 item-subtitle text-wrap>Untapped HQ - ILM</h3>
+                <button box-shadow text-capitalize button-follow ion-button item-end class="change-btn">CHANGE</button>
+
+              </ion-item>
+              <hr>
+              <ion-item default-item no-lines>
+               
+                  <h2 item-title><b>Untapped HQ</b></h2>
+                </ion-item>
+                <hr>
+          </ion-list>
+
+          <ion-list *ngSwitchCase="'unpublished'" no-lines>
+          
+            </ion-list>
+
+      </div>
+</ion-content>
+<ion-footer no-shadow class="bck-color" >
+		<button ion-button full class="menu-btn" (click)="addItems()"><ion-icon name="add"> </ion-icon>Add New Item</button>
+</ion-footer>

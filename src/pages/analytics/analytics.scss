@@ -1,3 +1,43 @@
 page-analytics {
-
+    .toolbar-background-md{
+        background-color: #89CA42 !important;
+    }
+    .chart-wrapper {
+        width: 25%;
+        display: inline-block;
+        margin: 1em 2em;
+     }
+  
+  
+     canvas  {
+        height: 250px;
+     }
+     #hrv{
+        border:         none !important;
+        border-left:    1px solid hsla(200, 10%, 50%,100) !important;
+        height:         50px !important;
+        width:          1px !important;  
+     }
+     #hrc{
+        height:         50px !important;
+        width:          1px !important; 
+        margin-left: -0.5rem;
+ 
+     }
+     .item-md.item-block .item-inner {
+        padding-right: 8px;
+        border-bottom: none !important;
+    }
+    .label-md {
+         margin: 0px !important ;
+    }
+    #h1-color{
+        color: rgb(73, 136, 218) !important;
+        
+    }
+    .btn{
+        background-color: white !important;
+        -webkit-box-shadow: none  !important;
+        color: #488aff !important;
+    }
 }

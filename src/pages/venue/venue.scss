@@ -1,8 +1,5 @@
 page-venue {
-    ion-list{
-        margin-left: -2rem !important;
-    text-align: left !important;
-    }
+    
     .toolbar-background-md {
         border-color: #b2b2b2;
         background-color: #89CA42;
@@ -106,5 +103,30 @@ page-venue {
         font-size: 22px !important;
 
 
+    }
+    .card{
+        width: 342px;
+    margin-left: -0.7rem;
+    }
+    .button-clear-md{
+        color: black !important;
+    }
+     .label {
+        margin: none !important;
+    }
+    .label-md {
+     margin: 10px 6px 10px 0 !important; 
+    }
+    ion-icon{
+        font-size: 2.2rem !important;
+    }
+    .details{
+        margin-top: 0rem !important;
+    }
+    h5{
+        font-size: 1.5rem !important;
+    }
+    [padding] h1:first-child, [padding] h2:first-child, [padding] h3:first-child, [padding] h4:first-child, [padding] h5:first-child, [padding] h6:first-child{
+        margin-top: 0rem !important;
     }
 }

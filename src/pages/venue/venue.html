@@ -7,22 +7,125 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>venue</ion-title>
+    <ion-title>Venue Activity</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-    <ion-list style="padding-top:40px !important;">
+    <ion-list class="list" style="padding-top:40px !important;">
         <ion-item default-item no-lines>
           <ion-avatar item-start>
             <img [src]="data.items.avatar"/>
           </ion-avatar>
           <h2 item-title>{{data.items.title}}</h2>
           <h3 item-subtitle text-wrap>{{data.items.subtitle}}</h3>
-         
+          <h4 item-end>24hr</h4>
         </ion-item>
         
       </ion-list>
+
+
+      <ion-card>
+
+        <ion-item>
+          <ion-avatar item-start style="border-radius: 0% !important;">
+            <img [src]="data.items.image">
+          </ion-avatar>
+          <h2>{{data.items.title}}</h2>
+          <h3>{{data.items.subtitle}}</h3>
+          <h3>{{data.items.style}}</h3>
+
+        </ion-item>
+      
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-start clear small>
+              <ion-icon name="comments"></ion-icon>
+              <div>Comments</div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-start clear small>
+              <ion-icon name="text"></ion-icon>
+              <div>Toast</div>
+            </button>
+          </ion-col>
+          
+        </ion-row>
+      
+      </ion-card>
+      <!-- <ion-list class="list"> -->
+        <!-- <ion-item default-item no-lines> -->
+          <ion-row>
+            <ion-col col-1>
+          <ion-icon name="text"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <p class="details"><strong>Danielle's Pizza & Pint, Next glass admins</strong> and 5 other toasted this.</p>
+        </ion-col>
+        </ion-row>
+
+
+        <ion-row>
+            <ion-col col-1>
+          <ion-icon name="text"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <p class="details"><strong>Emma Pizza and Pint</strong></p>
+          <p>Thanks for coming in!</p>
+          
+        </ion-col>
+        <ion-col col-2>
+            <h5 item-end>9hr</h5>
+        </ion-col>
+        </ion-row>
+        <hr style="width: 100% !important;">
+        <!-- </ion-item> -->
+        
+      <!-- </ion-list> -->
+
+      <ion-list class="list">
+          <ion-item default-item no-lines>
+            <ion-avatar item-start>
+              <img [src]="data.items.avatar"/>
+            </ion-avatar>
+            <h2 item-title>{{data.items.title}}</h2>
+            <h3 item-subtitle text-wrap>{{data.items.subtitle}}</h3>
+            <h4 item-end>24hr</h4>
+          </ion-item>
+          
+        </ion-list>
+  
+  
+        <ion-card>
+  
+          <ion-item>
+            <ion-avatar item-start style="border-radius: 0% !important;">
+              <img [src]="data.items.image">
+            </ion-avatar>
+            <h2>{{data.items.title}}</h2>
+            <h3>{{data.items.subtitle}}</h3>
+            <h3>{{data.items.style}}</h3>
+  
+          </ion-item>
+        
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-start clear small>
+                <ion-icon name="comments"></ion-icon>
+                <div>Comments</div>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-start clear small>
+                <ion-icon name="text"></ion-icon>
+                <div>Toast</div>
+              </button>
+            </ion-col>
+            
+          </ion-row>
+        
+        </ion-card>
 </ion-content>

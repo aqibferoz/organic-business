@@ -19,9 +19,13 @@ export class VenuePage {
     {
       "id": 1,
       "avatar": "assets/images/avatar/16.jpg",
+      "image": "assets/images/avatar/15.jpg",
       "title": "Vengeful Spirit IPA",
       "subtitle": "Stone Brewing",
-      "button": "Categories"
+      "button": "Categories",
+      "style": "IPA - American",
+      
+
     },
   };
   constructor(public navCtrl: NavController, public navParams: NavParams) {

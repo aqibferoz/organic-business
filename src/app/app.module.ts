@@ -30,6 +30,7 @@ import { LoginPage } from '../pages/login/login';
 import { AnalyticsPage } from '../pages/analytics/analytics';
 import { ItemsPage } from '../pages/items/items';
 import { HelperProvider } from '../providers/helper/helper';
+import { MenusPage } from '../pages/menus/menus';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { HelperProvider } from '../providers/helper/helper';
     VenuePage,
     AnalyticsPage,
     ItemsPage,
+    MenusPage,
     AddItemsPage
   ],
   imports: [
@@ -64,6 +66,7 @@ import { HelperProvider } from '../providers/helper/helper';
     VenuePage,
     AnalyticsPage,
     ItemsPage,
+    MenusPage,
     AddItemsPage
   ],
   providers: [
