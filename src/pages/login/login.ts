@@ -17,7 +17,7 @@ export class LoginPage {
   constructor(public navCtrl: NavController, private auth: AuthProvider, private geolocation: Geolocation) {
 
     if (this.auth.getToken()) {
-      this.navCtrl.push(TabsPage);
+      // this.navCtrl.push(TabsPage);
     }
 
     this.geolocation.getCurrentPosition()
